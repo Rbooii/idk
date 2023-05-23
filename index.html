@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flower Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      font-family: Arial, sans-serif;
+    }
+    
+    .card {
+      position: relative;
+      width: 90%;
+      height: 30%;
+      background-color: gold;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      overflow: hidden;
+    }
+    
+    .card:hover {
+      transform: scale(1.05);
+    }
+    
+    .card .flower {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('download.jpeg'); /* Replace 'flower.jpg' with your actual flower image */
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .card.open .flower {
+      opacity: 1;
+    }
+    
+    .card .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 16px;
+      background-color: brown;
+      transition: transform 0.3s ease-in-out;
+      text-align: center;
+      scale: 170%;
+    }
+    
+    .card.open .content {
+      transform: translateY(100%);
+    }
+    
+    .card .content h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" onclick="revealFlower()">
+    <div class="flower" style="
+            text-align: center;
+        "
+        onclick="back()"
+        >
+        <h2 style="
+            scale: 250%;
+            z-index: 99999;
+            position: absolute;
+            text-align: center;
+            ">HIHIHIHIHIHIIHIHIIHIHIHIHIH-AHAHHAHAHAHAH</h2>
+    </div>
+    <div class="content">
+      <h2 style="color:white;">Click to see programmer rizz</h2>
+      <h2  style="color:white;">SPECIALL!!!</h2>
+    </div>
+  </div>
+
+  <script>
+    function revealFlower() {
+      var card = document.querySelector('.card');
+      card.classList.add('open');
+    }
+    const back = () =>{
+        var card = document.querySelector('.card');
+        card.classList.remove('open');
+    }
+  </script>
+</body>
+</html>
